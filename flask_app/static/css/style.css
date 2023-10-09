@@ -29,7 +29,7 @@
 .pokedex-background {
     height: 680px;
     width: 100%;
-    background-image: linear-gradient(to bottom right, red, darkred);
+    background-image: linear-gradient(to bottom right, darkred, darkred);
     border: 4px solid black;
     border-radius: 20px;
     box-shadow: 5px 5px black;
@@ -40,14 +40,14 @@
     height: 630px;
     width: 100%;
     background-image: linear-gradient(to bottom right, red, darkred);
-    border: 2px solid black;
+    border: 4px solid black;
     border-radius: 20px;
 }
 
 /* Pokedex top bar */
 .pokedex-top {
     background-image: linear-gradient(to bottom right, red, darkred);
-    border: 2px solid black;
+    border: 4px solid black;
     border-radius: 20px;
     height: 100px;
     box-shadow: 5px 5px black;
@@ -69,7 +69,7 @@
 .pokedex-screen {
     height: 317px;
     width: 100%;
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
     border: 2px solid black;
     border-radius: 20px;
 }
@@ -95,7 +95,7 @@
 /* User input box */
 .input-box {
     padding: 3px;
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
     color: black;
     border: 2px solid black;
     border-radius: 20px;
@@ -110,10 +110,16 @@
 /* Search button */
 .search-button {
     padding: 3px;
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
     color: black;
     border: 2px solid black;
     border-radius: 15px;
+}
+
+/* Button hover event */
+button:hover {
+    color: white;
+    background-color: black;
 }
 
 /* Gray button */
