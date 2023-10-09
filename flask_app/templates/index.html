@@ -13,9 +13,12 @@
     <title>Pokemon App</title>
 </head>
 <body class="page-color">
-    <div class="d-flex justify-content-center mt-5">
+    <!-- Container -->
+    <div class="d-flex justify-content-center mt-3">
+        <!-- Pokedex -->
         <div class="pokedex-background col-md-4 d-flex justify-content-center px-2">
             <div class="pokedex-background2 p-3 my-auto">
+                <!-- Pokedex camera bar -->
                 <div class="pokedex-top d-flex align-items-center justify-content-between p-3">
                     <div class="pokedex-top-left">
                         <img class="lens" src="/static/img/lens.png" alt="Camera lens">
@@ -24,15 +27,45 @@
                         <img class="lights" src="/static/img/ryg.png" alt="Red, yellow, green lights">
                     </div>
                 </div>
+                <!-- End of pokedex camera bar -->
+                <!-- Pokedex screen -->
                 <div class="pokedex-screen mt-3 p-1">
                     <div class="pokedex-screen2 mt-1 p-1">
-                        <div class="pokedex-screen3">
-
+                        <div class="pokedex-screen3 d-flex justify-content-center">
+                            <form class="mt-5" action="/search/pokemon" method="POST">
+                                <input class="input-box" type="text" name="name" placeholder=" Name...">
+                                <button class="search-button" type="submit">Search Pokemon</button>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <!-- End of pokedex screen -->
+                <!-- Buttons, green screen, and d-pad -->
+                <div class="d-flex justify-content-around mt-2">
+                    <div class="flex-column col-md-5">
+                        <!-- Buttons -->
+                        <div class="d-flex align-items-center justify-content-around mb-3">
+                            <div style="margin-right: 10px;" class="gray-button"></div>
+                            <div class="d-flex">
+                                <div style="margin-right: 5px;" class="red-button"></div>
+                                <div style="margin-left: 5px;" class="green-button"></div>
+                            </div>
+                        </div>
+                        <!-- Green screen -->
+                        <div>
+                            <div class="green-screen"></div>
+                        </div>
+                    </div>
+                    <!-- D-pad -->
+                    <div>
+                        <img class="d-pad" src="/static/img/d-pad.png" alt="Controller directional pad">
+                    </div>
+                </div>
+                <!-- End of buttons,  green screen, and d-pad -->
             </div>
         </div>
+        <!-- End of Pokedex -->
     </div>
+    <!-- End of container -->
 </body>
 </html>
