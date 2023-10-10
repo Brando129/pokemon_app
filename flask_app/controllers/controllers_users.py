@@ -26,9 +26,11 @@ def search_pokemon():
     url = f'https://pokeapi.co/api/v2/pokemon/{name}/'
     response = requests.get(url)
 
+    session['id'] = response.json()['id']
     session['name'] = response.json()['name']
+    session['image'] = response.json()['sprites']['other']['official-artwork']['front_default']
     session['height'] = response.json()['height']
     session['weight'] = response.json()['weight']
-    session['abilities'] = response.json()['abilities'][0]['ability']['name']
+    session['ability'] = response.json()['abilities'][0]['ability']['name']
 
     return redirect('/display/pokemon/info')

@@ -12,10 +12,19 @@
     <!-- Font links -->
     <title>{{ session.name }}'s Data</title>
 </head>
-<body>
-    <h1>{{ session.name }}</h1>
-    <h1>{{ session.height }} ft</h1>
-    <h1>{{ session.weight }} lbs</h1>
-    <h1>{{ session.abilities }}</h1>
+<body class="bg-dark">
+    <div style="height: 500px;" class="d-flex border border-white col-md-6 mx-auto mt-5">
+        <div class="row">
+            <img class="image col-md-6" src="{{ session.image }}" alt="{{ session.name }}">
+            <div class="col-md-6 flex-column text-center text-white mt-3">
+                <h1>{{ session.name }}</h1>
+                <h3>Height: {{ session.height }} Decimetres</h3>
+                <h3>Weight: {{ session.weight }} Hectograms</h3>
+                <h3>Ability: {{ session.ability }}</h3>
+                <h3>Pokedex number: {{ session.id }}</h3>
+            </div>
+        </div>
+    </div>
+    <a href="/">Back</a>
 </body>
 </html>

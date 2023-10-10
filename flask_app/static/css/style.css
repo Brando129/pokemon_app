@@ -165,3 +165,9 @@ button:hover {
     width: 100%;
 }
 /* End of pokedex */
+
+/* Pokemon image */
+.image {
+    height: 490px;
+    width: 100%;
+}
