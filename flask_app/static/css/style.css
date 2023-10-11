@@ -87,7 +87,7 @@
 .pokedex-screen3 {
     height: 288px;
     width: 100%;
-    background-color: darkgray;
+    background-color: greenyellow;
     border: 2px solid black;
     border-radius: 20px;
 }
@@ -166,8 +166,25 @@ button:hover {
 }
 /* End of pokedex */
 
+/* Dipslay Pokemon HTML */
 /* Pokemon image */
 .image {
-    height: 490px;
+    height: 450px;
     width: 100%;
+    animation: rotation 12s infinite linear;
+}
+
+/* Image rotation */
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(359deg);
+    }
+}
+
+/* Pixel font */
+.pixel {
+    font-family: 'Pixelify Sans';
 }

@@ -10,21 +10,35 @@
     <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font links -->
-    <title>{{ session.name }}'s Data</title>
+    <!-- Pixel font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Gochi+Hand&family=Pixelify+Sans&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,100;1,400&family=Tektur&display=swap" rel="stylesheet">
+    <title>{{ session.name }} information</title>
 </head>
-<body class="bg-dark">
-    <div style="height: 500px;" class="d-flex border border-white col-md-6 mx-auto mt-5">
-        <div class="row">
-            <img class="image col-md-6" src="{{ session.image }}" alt="{{ session.name }}">
-            <div class="col-md-6 flex-column text-center text-white mt-3">
-                <h1>{{ session.name }}</h1>
-                <h3>Height: {{ session.height }} Decimetres</h3>
-                <h3>Weight: {{ session.weight }} Hectograms</h3>
-                <h3>Ability: {{ session.ability }}</h3>
-                <h3>Pokedex number: {{ session.id }}</h3>
+<body class="page-color">
+    <div class="row">
+        <div style="background-color: yellowgreen; border: 10px solid lightgray;" class="col-md-6 mx-auto mt-5 rounded">
+            <div class="flex-column pixel">
+                <div class="d-flex">
+                    <div class="col-md-6">
+                        <img class="image" src="{{ session.image }}" alt="{{ session.name }}">
+                    </div>
+                    <div style="margin-left: 30px;" class="flex-column col-md-6">
+                        <h1 class="my-4">{{ session.name }}</h1>
+                        <h4><strong>Height:</strong> {{ session.height }} Decimetres</h4>
+                        <h4><strong>Weight:</strong> {{ session.weight }} Hectograms</h4>
+                        <h4><strong>Ability:</strong> {{ session.ability }}</h4>
+                        <h4><strong>Type:</strong> {{ session.type }}</h4>
+                        <h4><strong>Power:</strong> {{ session.base_stat }}</h4>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center p-3">
+                    <a style="font-size: 25px;" class="text-decoration-none" href="/">Pokedex</a>
+                    <h4><strong>#</strong> {{ session.id }}</h4>
+                </div>
             </div>
         </div>
     </div>
-    <a href="/">Back</a>
 </body>
 </html>
